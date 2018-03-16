@@ -31,9 +31,11 @@ namespace AdditionTwoNumbOutputResult_MVVM_v2.Model
             RaisePropertyChanged("Sum");
         }
 
+
+
         internal void RemoveValue(object value)
         {
-            throw new NotImplementedException();
+            RemoveValue((int)value);
         }
 
         public int Sum => MyPublicValues.Sum(); //сумма

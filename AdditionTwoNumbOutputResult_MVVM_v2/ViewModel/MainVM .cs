@@ -1,5 +1,6 @@
 ﻿using AdditionTwoNumbOutputResult_MVVM_v2.Model;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace AdditionTwoNumbOutputResult_MVVM_v2.ViewModel
 {
@@ -22,11 +23,25 @@ namespace AdditionTwoNumbOutputResult_MVVM_v2.ViewModel
             });
 
             RemoveCommand = new DelegateCommand<int?>(i => {
-                if (i.HasValue) _model.RemoveValue(i.Value);
+
+                if (i.HasValue) { Debug.WriteLine(i); _model.RemoveValue(i.Value); } 
             });
         }
 
 
+
+        private object selectedItem;
+        public object SelectedItem
+        {
+            get { Debug.WriteLine(selectedItem);return selectedItem; }
+            set
+            {
+
+                selectedItem = value;
+
+               RemoveCommand.Execute(selectedItem); // уведомление View о том, что изменилась сумма
+            }
+        }
         public int Sum => _model.Sum;
         public ReadOnlyObservableCollection<int> MyValues => _model.MyPublicValues;
     }

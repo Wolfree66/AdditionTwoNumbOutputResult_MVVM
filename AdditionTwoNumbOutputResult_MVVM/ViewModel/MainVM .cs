@@ -19,10 +19,12 @@ namespace AdditionTwoNumbOutputResult_MVVM.ViewModel
         private int _number1;
         public int Number1
         {
-            get { return _number1; }
+            get { Console.WriteLine(_number1); return _number1; }
             set
             {
+        
                 _number1 = value;
+                Console.WriteLine(_number1);
                 OnPropertyChanged("Number3"); // уведомление View о том, что изменилась сумма
             }
         }

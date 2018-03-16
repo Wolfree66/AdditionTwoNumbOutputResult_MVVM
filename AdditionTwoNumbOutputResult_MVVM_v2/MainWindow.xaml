@@ -25,6 +25,7 @@
                 Command="{Binding RemoveCommand}"
                 CommandParameter="{Binding ElementName=TheListBox, Path=SelectedIndex}"/>
         <!-- Коллекция -->
-        <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}"/>
+        <ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}" SelectedIndex ="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged}"/>
+        <!--<ListBox  x:Name="TheListBox" ItemsSource="{Binding MyValues}" />-->
     </DockPanel>
 </Window>
