@@ -3,10 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AdditionTwoNumbOutputResult_MVVM"
+        xmlns:local="clr-namespace:AdditionTwoNumbOutputResult_MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="525" SizeToContent="WidthAndHeight">
+<Window.DataContext>
+        <local:MainVM></local:MainVM>
+    </Window.DataContext>
+    <StackPanel>
+        <!--Binding, собственно, соединяет текстовое поле со свойством в VM -->
+        <!--UpdateSourceTrigger, в данном случае, выполняет передачу значение в VM в момент ввода -->
+        <Label Content="Введите слагаемое"></Label>
+        <TextBox Width="130" Text="{Binding Number1, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10"/>
+        <Label Content="Введите слагаемое"></Label>
+        <TextBox Width="130" Text="{Binding Number2, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10"/>
+   
+        <Label Content="Сумма"></Label>
+        <!--Mode=OneWay необходим для призязки свойства только для чтения -->
+        <TextBox Width="130" Text="{Binding Number3, Mode=OneWay}" IsReadOnly="True" HorizontalAlignment="Left" Margin="10"/>
+    </StackPanel>
 </Window>

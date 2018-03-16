@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionTwoNumbOutputResult_MVVM", "AdditionTwoNumbOutputResult_MVVM\AdditionTwoNumbOutputResult_MVVM.csproj", "{449C6894-C975-40B0-A90B-B20D78965374}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdditionTwoNumbOutputResult_MVVM_v2", "AdditionTwoNumbOutputResult_MVVM_v2\AdditionTwoNumbOutputResult_MVVM_v2.csproj", "{744CACD7-F0D2-4FB8-B0EE-8970090C2A8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{449C6894-C975-40B0-A90B-B20D78965374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{449C6894-C975-40B0-A90B-B20D78965374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{449C6894-C975-40B0-A90B-B20D78965374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{744CACD7-F0D2-4FB8-B0EE-8970090C2A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{744CACD7-F0D2-4FB8-B0EE-8970090C2A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{744CACD7-F0D2-4FB8-B0EE-8970090C2A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{744CACD7-F0D2-4FB8-B0EE-8970090C2A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
